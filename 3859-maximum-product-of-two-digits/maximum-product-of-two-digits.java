@@ -3,10 +3,10 @@ class Solution {
 
         int max1 = 0;
         int max2 = 0;
-        
+        int temp = n ;
 
-        while(n!=0){
-            int ldigit = n %  10;
+        while(temp!=0){
+            int ldigit = temp %  10;
             if(ldigit > max1){
                 max2 = max1;
                 max1 = ldigit;
@@ -17,7 +17,7 @@ class Solution {
             }
 
 
-            n = n / 10;
+            temp = temp / 10;
 
         }
         return max1 *max2;
