@@ -1,5 +1,8 @@
 class Solution {
     public boolean isPalindrome(int x) {
+         if(x<0){
+            return false;
+        }
 
         int temp = x;
         int result = 0;
@@ -9,13 +12,8 @@ class Solution {
             result = result * 10 + ldigit;
             temp /=10; 
         }
-        if(x<0){
-            return false;
-        }
-        else if(result == x){
-            return true;
-        }else{
-            return false;
-        }
+        return result == x;
+       
+    
     }
 }
